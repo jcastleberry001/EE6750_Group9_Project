@@ -33,18 +33,6 @@ os.system("sudo pkill -f iperf3")
 os.system("sudo mn -c")
 
 # -----------------------------
-# Helper: RSSI logging
-# -----------------------------
-#def log_rssi(sta, logfile, duration):
-# with open(logfile, 'w') as f:
-# for t in range(duration):
-# rssi = sta.cmd(f"iw dev {sta.name}-wlan0 link | grep signal | awk '{{print
-#$2}}'").strip()
-# f.write(f"{t},{rssi}\n")
-# sleep(1)
-
-
-# -----------------------------
 # Create network
 # -----------------------------
 print("Creating controller")
@@ -70,11 +58,6 @@ net.plotGraph(max_x=100, max_y=100)
 
 print("Starting network")
 net.start()
-
-#for ap in net.aps:
-#	ap.cmd('ovs-vsctl set-fail-mode {} standalone'.format(ap.name))
-
-#ap1.cmd('ifconfig ap1 10.0.0.1/24 up')
 sleep(1)
 
 # -----------------------------
@@ -109,10 +92,6 @@ tcp_server = sta1.popen(f'iperf3 -s -p {TCP_PORT} --logfile tcp_server.txt')
 # TCP trial with live movement
 # -----------------------------
 print("*** TCP trial with STA moving")
-#rssi_thread = Thread(target=log_rssi, args=(sta1, "tcp_rssi.txt",TRIAL_DURATION))
-#rssi_thread.start()
-
-#tcp_client = sta2.popen(f'iperf3 -c 10.0.0.1 -p {TCP_PORT} -t {TRIAL_DURATION} -i 1')
 
 for t in range(201):
 	x = 50
@@ -126,8 +105,6 @@ for t in range(201):
 	#Update RSSI	
 	rssi_1 = sta1.wintfs[0].rssi
 	rssi_2 = sta2.wintfs[0].rssi
-	#print(rssi_1)
-	#print(rssi_2)
 	item1 = f"rssi1 {rssi_1} dB"
 	item2 = f"rssi2 {rssi_2} dB"
 	receiver_one = mpatches.Patch(color='purple', label=item1)
@@ -149,9 +126,3 @@ print("*** TCP trial complete\n")
 info("*** Running CLI\n")
 CLI(net)
 
-# -----------------------------
-# Stop network
-# -----------------------------
-#tcp_server.terminate()
-#tcp_server.wait()
-#net.stop()
