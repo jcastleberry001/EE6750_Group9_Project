@@ -15,11 +15,11 @@ Please perform the following steps to use this code:
 7) After booting, CNTRL + ALT + T to open a bash shell.
    <img width="1028" height="1058" alt="image" src="https://github.com/user-attachments/assets/7cfbc3be-1c63-4c0c-9184-0d233be1d165" />
    
-8) Copy and paste "v1.py" to the VM, and make sure it has the ".py" extension.
+8) Copy and paste "v2_tcp.py" and "v2_udp.py" to the VM, and make sure it has the ".py" extension.
 9) In the shell, move directory to v1.py.
     <img width="879" height="196" alt="4) cd" src="https://github.com/user-attachments/assets/4a165576-e815-402b-867c-e2b93c20ea8c" />
     
-10) In the shell, write "sudo python v1.py" to execute the script.
+10) In the shell, write "sudo python v2_tcp.py" (for TCP traffic mobility) or "sudo python v2_udp.py" (for UDP traffic mobility) to execute the script.
     <img width="879" height="169" alt="5) sudo" src="https://github.com/user-attachments/assets/4489db9f-1f8b-4b1b-8849-7d31139bdd49" />
     
 11) If the script executed correctly, two figures should open like shown below.
