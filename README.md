@@ -16,7 +16,7 @@ Please perform the following steps to use this code:
    <img width="1028" height="1058" alt="image" src="https://github.com/user-attachments/assets/7cfbc3be-1c63-4c0c-9184-0d233be1d165" />
    
 8) Copy and paste "v2_tcp.py" and "v2_udp.py" to the VM, and make sure it has the ".py" extension.
-9) In the shell, move directory to v1.py.
+9) In the shell, move to the relevant directory.
     <img width="879" height="196" alt="4) cd" src="https://github.com/user-attachments/assets/4a165576-e815-402b-867c-e2b93c20ea8c" />
     
 10) In the shell, write "sudo python v2_tcp.py" (for TCP traffic mobility)
