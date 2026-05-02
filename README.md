@@ -15,15 +15,16 @@ Please perform the following steps to use this code:
 7) After booting, CNTRL + ALT + T to open a bash shell.
    <img width="1028" height="1058" alt="image" src="https://github.com/user-attachments/assets/7cfbc3be-1c63-4c0c-9184-0d233be1d165" />
    
-8) Copy and paste "v2_tcp.py" and "v2_udp.py" to the VM, and make sure it has the ".py" extension.
+8) Copy and paste the trial type to the VM, and make sure it has the ".py" extension.
 9) In the shell, move to the relevant directory.
     <img width="879" height="196" alt="4) cd" src="https://github.com/user-attachments/assets/4a165576-e815-402b-867c-e2b93c20ea8c" />
     
-10) In the shell, write "sudo python v2_tcp.py" (for TCP traffic mobility)
+10) In the shell, write "sudo python (test scenario.py)"
     <img width="1005" height="175" alt="TCP file" src="https://github.com/user-attachments/assets/09f2023f-6e8d-4176-bb7d-ffec8317e1e2" />
-    or "sudo python v2_udp.py" (for UDP traffic mobility) to execute the script.
-    <img width="995" height="178" alt="UDP file" src="https://github.com/user-attachments/assets/b9c27d6d-4aa4-46c8-9ee2-f00681ba4e75" />
-
     
-12) If the script executed correctly, two figures should open like shown below.
+11) If the script executed correctly, two figures should open like shown below.
     <img width="1221" height="1123" alt="6) Figures" src="https://github.com/user-attachments/assets/0a6313f8-9e2f-4570-8e68-5cc425121bc3" />
+
+12) (The speed of the nodes and the paths can both be easily edited. The provided files are examples of a variety of mobility scenarios and speed conditions).
+    
+13) If a scenario needs to be run multiple times, the "100trials.py" file can be run instead in step 10). The file can easily be edited to adjust the number of trial runs.
